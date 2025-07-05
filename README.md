@@ -31,5 +31,11 @@ Open it as a static site
    ```
 _________________
 
-Contact form: https://forms.gle/wjty24H2gBFYEijL8
-mail: mikancat.mk.taki@gmail.com
+Contact form
+```
+https://forms.gle/wjty24H2gBFYEijL8
+```
+mail
+```
+mikancat.mk.taki@gmail.com
+```
