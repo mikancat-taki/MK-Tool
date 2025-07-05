@@ -23,15 +23,11 @@ Open it as a static site
 
 ・Buildcommand
    ```
-npm ci && npm run build
+   npm install; npm run build
    ```
-・ Branch
+・ start
    ```
-   main
-   ```
-・Publish Directory
-   ```
-   dist
+   npm run start
    ```
 _________________
 
