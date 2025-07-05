@@ -30,7 +30,7 @@ Open it as a static site
    ```
    npm run start
    ```
-_________________
+_______________________________________
 
 Contact form:
 ```
