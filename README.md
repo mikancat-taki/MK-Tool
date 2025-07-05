@@ -31,11 +31,11 @@ Open it as a static site
    ```
 _________________
 
-Contact form
+Contact form:
 ```
 https://forms.gle/wjty24H2gBFYEijL8
 ```
-mail
+mail:
 ```
 mikancat.mk.taki@gmail.com
 ```
