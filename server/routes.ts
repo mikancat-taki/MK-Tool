@@ -48,12 +48,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
           delete proxyRes.headers['content-security-policy'];
           delete proxyRes.headers['content-security-policy-report-only'];
           delete proxyRes.headers['strict-transport-security'];
+          delete proxyRes.headers['x-content-type-options'];
           
           // Add CORS headers for better compatibility
           proxyRes.headers['Access-Control-Allow-Origin'] = '*';
           proxyRes.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS';
           proxyRes.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, X-Requested-With';
           proxyRes.headers['Access-Control-Allow-Credentials'] = 'true';
+          
+          // Special handling for DuckDuckGo
+          if (targetUrl.includes('duckduckgo.com')) {
+            // Allow iframe embedding for DuckDuckGo
+            proxyRes.headers['X-Frame-Options'] = 'ALLOWALL';
+            // Modify content type for better iframe compatibility
+            if (proxyRes.headers['content-type'] && proxyRes.headers['content-type'].includes('text/html')) {
+              proxyRes.headers['content-type'] = 'text/html; charset=utf-8';
+            }
+          }
           
           // Enable caching for better performance
           proxyRes.headers['Cache-Control'] = 'public, max-age=300';
