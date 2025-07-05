@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { Wrench, Globe, Calculator, Youtube, Shield } from "lucide-react";
+import { Wrench, Globe, Calculator, Youtube, Shield, Search, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import WorldClock from "@/components/world-clock";
 import CalculatorComponent from "@/components/calculator";
 import YoutubePlayer from "@/components/youtube-player";
 import ProxyBrowser from "@/components/proxy-browser";
+import DuckDuckGoSearch from "@/components/duckduckgo-search";
+import Translator from "@/components/translator";
 
-type TabType = "world-clock" | "calculator" | "video-player" | "proxy";
+type TabType = "world-clock" | "calculator" | "video-player" | "proxy" | "search" | "translator";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TabType>("world-clock");
@@ -32,6 +34,18 @@ export default function Home() {
       component: YoutubePlayer,
     },
     {
+      id: "search" as TabType,
+      label: "検索",
+      icon: Search,
+      component: DuckDuckGoSearch,
+    },
+    {
+      id: "translator" as TabType,
+      label: "翻訳",
+      icon: Languages,
+      component: Translator,
+    },
+    {
       id: "proxy" as TabType,
       label: "プロキシ",
       icon: Shield,
@@ -50,7 +64,7 @@ export default function Home() {
             <Wrench className="mr-3 h-6 w-6" />
             MK-Tool
           </h1>
-          <p className="text-blue-100 mt-1">世界時計・電卓・動画プレイヤー・プロキシ機能</p>
+          <p className="text-blue-100 mt-1">世界時計・電卓・動画プレイヤー・検索・翻訳・プロキシ機能</p>
         </div>
       </header>
 
@@ -95,7 +109,7 @@ export default function Home() {
             © 2025 MK-Tool - すべての権利を保有
           </p>
           <p className="text-gray-400 text-sm mt-2">
-            世界時計・電卓・動画プレイヤー・プロキシ機能を統合したWebアプリケーション
+            世界時計・電卓・動画プレイヤー・検索・翻訳・プロキシ機能を統合したWebアプリケーション
           </p>
         </div>
       </footer>

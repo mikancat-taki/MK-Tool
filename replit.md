@@ -2,7 +2,7 @@
 
 ## Overview
 
-MK-Tool is a comprehensive multi-tool web application built with React and Express, featuring world clock, calculator, YouTube video player, and enhanced proxy browser with DuckDuckGo search integration. The application is designed as a single-page application (SPA) with a modern, clean Japanese interface using shadcn/ui components and Tailwind CSS for styling.
+MK-Tool is a comprehensive multi-tool web application built with React and Express, featuring world clock, calculator, YouTube video player, DuckDuckGo search engine, real-time translation, and enhanced proxy browser functionality. The application is designed as a single-page application (SPA) with a modern, clean Japanese interface using shadcn/ui components and Tailwind CSS for styling.
 
 ## System Architecture
 
@@ -42,7 +42,21 @@ The application follows a full-stack architecture with clear separation between 
    - URL parsing for youtube.com and youtu.be links
    - Responsive iframe implementation
 
-4. **Enhanced Proxy Browser** (`/components/proxy-browser.tsx`)
+4. **DuckDuckGo Search Engine** (`/components/duckduckgo-search.tsx`)
+   - Privacy-focused search functionality
+   - Real-time search results from DuckDuckGo
+   - Advanced search operators support
+   - Japanese localization with search tips
+   - Integration with proxy browser for safe site access
+
+5. **Real-time Translator** (`/components/translator.tsx`)
+   - Multi-language translation support (16 languages)
+   - Auto-detection of source language
+   - Language swap functionality
+   - Copy-to-clipboard integration
+   - Keyboard shortcuts (Ctrl+Enter)
+
+6. **Enhanced Proxy Browser** (`/components/proxy-browser.tsx`)
    - Safe web browsing through advanced proxy
    - DuckDuckGo search integration with privacy focus
    - Quick access buttons for popular sites including DuckDuckGo
@@ -55,7 +69,19 @@ The application follows a full-stack architecture with clear separation between 
    - Security headers manipulation
    - Error handling and logging
 
-2. **Storage Layer** (`/server/storage.ts`)
+2. **Search API** (`/api/search`)
+   - DuckDuckGo search result parsing and formatting
+   - Privacy-focused search without tracking
+   - Japanese region support
+   - Safe search filtering
+
+3. **Translation API** (`/api/translate`)
+   - Google Translate API integration
+   - Support for 16 languages including auto-detection
+   - Real-time translation processing
+   - Error handling and validation
+
+4. **Storage Layer** (`/server/storage.ts`)
    - Abstracted storage interface for future database integration
    - In-memory storage implementation for development
    - User management capabilities
@@ -116,6 +142,9 @@ Changelog:
 - July 05, 2025. Initial setup
 - July 05, 2025. Enhanced proxy functionality with DuckDuckGo search integration
 - July 05, 2025. Rebranded application to "MK-Tool" with Japanese localization
+- July 05, 2025. Added dedicated DuckDuckGo search engine component with privacy focus
+- July 05, 2025. Implemented multi-language translator with 16 language support
+- July 05, 2025. Integrated Google Translate API for real-time translation
 
 ## User Preferences
 
