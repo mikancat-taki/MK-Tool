@@ -48,7 +48,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4">
           <h1 className="text-2xl font-bold flex items-center">
             <Wrench className="mr-3 h-6 w-6" />
-            マルチツールアプリケーション
+            MK-Tool
           </h1>
           <p className="text-blue-100 mt-1">世界時計・電卓・動画プレイヤー・プロキシ機能</p>
         </div>
@@ -92,7 +92,7 @@ export default function Home() {
       <footer className="bg-gray-800 text-white py-8 mt-12">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-300">
-            © 2024 マルチツールアプリケーション - すべての権利を保有
+            © 2025 MK-Tool - すべての権利を保有
           </p>
           <p className="text-gray-400 text-sm mt-2">
             世界時計・電卓・動画プレイヤー・プロキシ機能を統合したWebアプリケーション

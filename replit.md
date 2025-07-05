@@ -1,8 +1,8 @@
-# Multi-Tool Web Application
+# MK-Tool - Multi-Tool Web Application
 
 ## Overview
 
-This is a comprehensive multi-tool web application built with React and Express, featuring world clock, calculator, YouTube video player, and proxy browser functionalities. The application is designed as a single-page application (SPA) with a modern, clean interface using shadcn/ui components and Tailwind CSS for styling.
+MK-Tool is a comprehensive multi-tool web application built with React and Express, featuring world clock, calculator, YouTube video player, and enhanced proxy browser with DuckDuckGo search integration. The application is designed as a single-page application (SPA) with a modern, clean Japanese interface using shadcn/ui components and Tailwind CSS for styling.
 
 ## System Architecture
 
@@ -42,10 +42,12 @@ The application follows a full-stack architecture with clear separation between 
    - URL parsing for youtube.com and youtu.be links
    - Responsive iframe implementation
 
-4. **Proxy Browser** (`/components/proxy-browser.tsx`)
-   - Safe web browsing through proxy
-   - Quick access buttons for popular sites
-   - CORS handling and security headers
+4. **Enhanced Proxy Browser** (`/components/proxy-browser.tsx`)
+   - Safe web browsing through advanced proxy
+   - DuckDuckGo search integration with privacy focus
+   - Quick access buttons for popular sites including DuckDuckGo
+   - Enhanced CORS handling and security headers
+   - Special handling for search engines and privacy protection
 
 ### Backend Services
 1. **Proxy Service** (`/server/routes.ts`)
@@ -112,7 +114,12 @@ The application follows a full-stack architecture with clear separation between 
 
 Changelog:
 - July 05, 2025. Initial setup
+- July 05, 2025. Enhanced proxy functionality with DuckDuckGo search integration
+- July 05, 2025. Rebranded application to "MK-Tool" with Japanese localization
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Application name: MK-Tool (requested by user)
+Language: Japanese interface and content
+Features requested: DuckDuckGo search integration in proxy browser inspired by mikancat-taki/Nebula repository
